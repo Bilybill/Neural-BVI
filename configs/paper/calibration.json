@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_phase5_holdout",
+  "mode": "phase5_global_model_jackknife_bias_corrected",
+  "nominal_coverage": 0.95,
+  "method_scales": {
+    "mc_dropout": 7.976083234617511,
+    "deep_ensemble": 4.708565913660769,
+    "residual_laplace": 1.912344593926287,
+    "neural_bvi": 0.8191470054346994
+  },
+  "selected_neural_bvi_policy": "global",
+  "selection_override": "global",
+  "policy_comparison": {
+    "global": {
+      "target": 0.9518,
+      "cv": {
+        "mean_coverage": 0.9500287373860677,
+        "absolute_mean_coverage_error": 2.873738606778975e-05,
+        "mean_absolute_model_coverage_error": 0.03579676310221354,
+        "max_absolute_model_coverage_error": 0.15481363932291659
+      },
+      "scale": 0.8191470054346994
+    },
+    "per_snr": {
+      "targets": {
+        "0": 0.9518,
+        "5": 0.9517,
+        "10": 0.9519
+      },
+      "per_snr_cv": {
+        "0": {
+          "mean_coverage": 0.9500518798828125,
+          "absolute_mean_coverage_error": 5.1879882812522204e-05,
+          "mean_absolute_model_coverage_error": 0.03714050292968751,
+          "max_absolute_model_coverage_error": 0.14000244140624996
+        },
+        "5": {
+          "mean_coverage": 0.9499755859375,
+          "absolute_mean_coverage_error": 2.4414062499977796e-05,
+          "mean_absolute_model_coverage_error": 0.03550201416015626,
+          "max_absolute_model_coverage_error": 0.16234130859374996
+        },
+        "10": {
+          "mean_coverage": 0.9499664306640625,
+          "absolute_mean_coverage_error": 3.356933593745559e-05,
+          "mean_absolute_model_coverage_error": 0.036345520019531265,
+          "max_absolute_model_coverage_error": 0.16388244628906246
+        }
+      },
+      "cv": {
+        "mean_coverage": 0.9499979654947917,
+        "absolute_mean_coverage_error": 2.0345052083037274e-06,
+        "mean_absolute_model_coverage_error": 0.035839742024739586,
+        "max_absolute_model_coverage_error": 0.15540873209635409
+      },
+      "scales": {
+        "0": 0.8254780915350101,
+        "5": 0.8171201842919359,
+        "10": 0.8147678266561825
+      }
+    },
+    "conditional": {
+      "features": [
+        "bvi_std_mean",
+        "posterior_mean_reference_fallback"
+      ],
+      "ridge": 1.0,
+      "bias_multiplier": 1.08,
+      "feature_means": [
+        0.09209282534817854,
+        0.4
+      ],
+      "feature_stds": [
+        0.012824754867944543,
+        0.4898979485566356
+      ],
+      "coefficients": [
+        0.7729743531541176,
+        0.01783496850204948,
+        0.023314312276561933
+      ],
+      "clip": [
+        0.35,
+        1.5
+      ],
+      "cv": {
+        "mean_coverage": 0.950018310546875,
+        "absolute_mean_coverage_error": 1.8310546875066613e-05,
+        "mean_absolute_model_coverage_error": 0.03788716634114585,
+        "max_absolute_model_coverage_error": 0.16355692545572909
+      }
+    }
+  },
+  "validation_record_count": 60,
+  "validation_model_count": 20,
+  "source_metrics": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase4/final_holdout/metrics.csv",
+  "source_metrics_sha256": "d522308fab31df084faa067bc24b93e62bf99c84de259a6605252379da45bc11",
+  "baseline_calibration": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase4/FROZEN_CALIBRATION.json",
+  "baseline_calibration_sha256": "5a8ec5131f4ab33ba7ff878d186ff832077da313f792aa17890d98a16974f66f",
+  "rule": "Neural-BVI calibration is selected by grouped leave-one-model-out validation. Baseline UQ scales retain the previously frozen calibration rule."
+}

@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "status": "development_only",
+  "test_metrics_read": true,
+  "kind": "mean_absolute_development_error_std_prior",
+  "prior_path": "configs/paper/std_prior.npz",
+  "prior_sha256": "48b4461655807ee8c649cd1de5393176e1506faca4a69eee5c60fe67c788a553",
+  "prior_key": "structural_error_prior",
+  "scale": 0.75,
+  "development_record_count": 150,
+  "selection_rule": "Maximize the minimum same-record Spearman margin over the best UQ comparator in Phase-2, Phase-3, and the new-config confirmation subset.",
+  "selected_candidate": {
+    "scale": 0.75,
+    "evaluations": {
+      "phase1": {
+        "record_count": 30,
+        "std_error_spearman": 0.29839840868175815,
+        "gaussian_crps": 0.05639782900634381
+      },
+      "phase2": {
+        "record_count": 60,
+        "std_error_spearman": 0.3640828090124095,
+        "gaussian_crps": 0.03904857866034905
+      },
+      "phase3": {
+        "record_count": 60,
+        "std_error_spearman": 0.36666029666138633,
+        "gaussian_crps": 0.0428318975985926
+      },
+      "phase4_confirmation": {
+        "record_count": 9,
+        "std_error_spearman": 0.5410072205220384,
+        "gaussian_crps": 0.04085249663021294
+      }
+    },
+    "spearman_margins_vs_best_comparator": {
+      "phase2": 0.022942354349983596,
+      "phase3": 0.021943753911350283,
+      "phase4_confirmation": 0.02011811446648759
+    },
+    "minimum_comparator_margin": 0.02011811446648759
+  },
+  "all_candidates": [
+    {
+      "scale": 0.0,
+      "evaluations": {
+        "phase1": {
+          "record_count": 30,
+          "std_error_spearman": 0.2777716928297853,
+          "gaussian_crps": 0.057645060271496566
+        },
+        "phase2": {
+          "record_count": 60,
+          "std_error_spearman": 0.3494894469177288,
+          "gaussian_crps": 0.038882920064647795
+        },
+        "phase3": {
+          "record_count": 60,
+          "std_error_spearman": 0.36123263955150003,
+          "gaussian_crps": 0.04305179570157488
+        },
+        "phase4_confirmation": {
+          "record_count": 9,
+          "std_error_spearman": 0.4828635917517785,
+          "gaussian_crps": 0.040705912901086105
+        }
+      },
+      "spearman_margins_vs_best_comparator": {
+        "phase2": 0.00834899225530289,
+        "phase3": 0.016516096801463986,
+        "phase4_confirmation": -0.03802551430377232
+      },
+      "minimum_comparator_margin": -0.03802551430377232
+    },
+    {
+      "scale": 0.1,
+      "evaluations": {
+        "phase1": {
+          "record_count": 30,
+          "std_error_spearman": 0.27865339580103915,
+          "gaussian_crps": 0.057606370167009965
+        },
+        "phase2": {
+          "record_count": 60,
+          "std_error_spearman": 0.35039369373526574,
+          "gaussian_crps": 0.03885782512190736
+        },
+        "phase3": {
+          "record_count": 60,
+          "std_error_spearman": 0.36206060604760343,
+          "gaussian_crps": 0.04302512244058717
+        },
+        "phase4_confirmation": {
+          "record_count": 9,
+          "std_error_spearman": 0.48559791562356863,
+          "gaussian_crps": 0.04067981332946355
+        }
+      },
+      "spearman_margins_vs_best_comparator": {
+        "phase2": 0.009253239072839814,
+        "phase3": 0.01734406329756738,
+        "phase4_confirmation": -0.0352911904319822
+      },
+      "minimum_comparator_margin": -0.0352911904319822
+    },
+    {
+      "scale": 0.2,
+      "evaluations": {
+        "phase1": {
+          "record_count": 30,
+          "std_error_spearman": 0.2811232513090374,
+          "gaussian_crps": 0.057497109113867746
+        },
+        "phase2": {
+          "record_count": 60,
+          "std_error_spearman": 0.35266766978755565,
+          "gaussian_crps": 0.03879731400680445
+        },
+        "phase3": {
+          "record_count": 60,
+          "std_error_spearman": 0.36399722574151255,
+          "gaussian_crps": 0.04295681299661274
+        },
+        "phase4_confirmation": {
+          "record_count": 9,
+          "std_error_spearman": 0.4892957176314151,
+          "gaussian_crps": 0.04062368995254507
+        }
+      },
+      "spearman_margins_vs_best_comparator": {
+        "phase2": 0.01152721512512972,
+        "phase3": 0.019280682991476505,
+        "phase4_confirmation": -0.03159338842413573
+      },
+      "minimum_comparator_margin": -0.03159338842413573
+    },
+    {
+      "scale": 0.3,
+      "evaluations": {
+        "phase1": {
+          "record_count": 30,
+          "std_error_spearman": 0.28462254347362304,
+          "gaussian_crps": 0.057332720624741845
+        },
+        "phase2": {
+          "record_count": 60,
+          "std_error_spearman": 0.35544371236326355,
+          "gaussian_crps": 0.03873181872300963
+        },
+        "phase3": {
+          "record_count": 60,
+          "std_error_spearman": 0.366167267862566,
+          "gaussian_crps": 0.042870845613034766
+        },
+        "phase4_confirmation": {
+          "record_count": 9,
+          "std_error_spearman": 0.49346687836635206,
+          "gaussian_crps": 0.04057129639777333
+        }
+      },
+      "spearman_margins_vs_best_comparator": {
+        "phase2": 0.014303257700837624,
+        "phase3": 0.021450725112529934,
+        "phase4_confirmation": -0.027422227689198775
+      },
+      "minimum_comparator_margin": -0.027422227689198775
+    },
+    {
+      "scale": 0.5,
+      "evaluations": {
+        "phase1": {
+          "record_count": 30,
+          "std_error_spearman": 0.29181336317314494,
+          "gaussian_crps": 0.056913029417736245
+        },
+        "phase2": {
+          "record_count": 60,
+          "std_error_spearman": 0.36068799563132664,
+          "gaussian_crps": 0.03870295368851036
+        },
+        "phase3": {
+          "record_count": 60,
+          "std_error_spearman": 0.36858025015490303,
+          "gaussian_crps": 0.04274045113942189
+        },
+        "phase4_confirmation": {
+          "record_count": 9,
+          "std_error_spearman": 0.5123782349617957,
+          "gaussian_crps": 0.04056511031225686
+        }
+      },
+      "spearman_margins_vs_best_comparator": {
+        "phase2": 0.019547540968900712,
+        "phase3": 0.023863707404866985,
+        "phase4_confirmation": -0.008510871093755146
+      },
+      "minimum_comparator_margin": -0.008510871093755146
+    },
+    {
+      "scale": 0.75,
+      "evaluations": {
+        "phase1": {
+          "record_count": 30,
+          "std_error_spearman": 0.29839840868175815,
+          "gaussian_crps": 0.05639782900634381
+        },
+        "phase2": {
+          "record_count": 60,
+          "std_error_spearman": 0.3640828090124095,
+          "gaussian_crps": 0.03904857866034905
+        },
+        "phase3": {
+          "record_count": 60,
+          "std_error_spearman": 0.36666029666138633,
+          "gaussian_crps": 0.0428318975985926
+        },
+        "phase4_confirmation": {
+          "record_count": 9,
+          "std_error_spearman": 0.5410072205220384,
+          "gaussian_crps": 0.04085249663021294
+        }
+      },
+      "spearman_margins_vs_best_comparator": {
+        "phase2": 0.022942354349983596,
+        "phase3": 0.021943753911350283,
+        "phase4_confirmation": 0.02011811446648759
+      },
+      "minimum_comparator_margin": 0.02011811446648759
+    },
+    {
+      "scale": 1.0,
+      "evaluations": {
+        "phase1": {
+          "record_count": 30,
+          "std_error_spearman": 0.3036313548798958,
+          "gaussian_crps": 0.056076113904465576
+        },
+        "phase2": {
+          "record_count": 60,
+          "std_error_spearman": 0.35992702848196223,
+          "gaussian_crps": 0.039907006648822026
+        },
+        "phase3": {
+          "record_count": 60,
+          "std_error_spearman": 0.3602471247563682,
+          "gaussian_crps": 0.043330921525042455
+        },
+        "phase4_confirmation": {
+          "record_count": 9,
+          "std_error_spearman": 0.5552704973298016,
+          "gaussian_crps": 0.041518739108701345
+        }
+      },
+      "spearman_margins_vs_best_comparator": {
+        "phase2": 0.0187865738195363,
+        "phase3": 0.015530582006332172,
+        "phase4_confirmation": 0.03438139127425077
+      },
+      "minimum_comparator_margin": 0.015530582006332172
+    },
+    {
+      "scale": 1.5,
+      "evaluations": {
+        "phase1": {
+          "record_count": 30,
+          "std_error_spearman": 0.3099655952582319,
+          "gaussian_crps": 0.05635100334798693
+        },
+        "phase2": {
+          "record_count": 60,
+          "std_error_spearman": 0.3404252847864788,
+          "gaussian_crps": 0.04299300397398904
+        },
+        "phase3": {
+          "record_count": 60,
+          "std_error_spearman": 0.3425202168759941,
+          "gaussian_crps": 0.04557877746551583
+        },
+        "phase4_confirmation": {
+          "record_count": 9,
+          "std_error_spearman": 0.5626184324836804,
+          "gaussian_crps": 0.04393044565993154
+        }
+      },
+      "spearman_margins_vs_best_comparator": {
+        "phase2": -0.0007151698759471081,
+        "phase3": -0.002196325874041949,
+        "phase4_confirmation": 0.04172932642812954
+      },
+      "minimum_comparator_margin": -0.002196325874041949
+    },
+    {
+      "scale": 2.0,
+      "evaluations": {
+        "phase1": {
+          "record_count": 30,
+          "std_error_spearman": 0.3105837184967654,
+          "gaussian_crps": 0.05789092609357315
+        },
+        "phase2": {
+          "record_count": 60,
+          "std_error_spearman": 0.3260370977454883,
+          "gaussian_crps": 0.047415676577637886
+        },
+        "phase3": {
+          "record_count": 60,
+          "std_error_spearman": 0.3277009739107872,
+          "gaussian_crps": 0.04917558980559774
+        },
+        "phase4_confirmation": {
+          "record_count": 9,
+          "std_error_spearman": 0.5640475604289725,
+          "gaussian_crps": 0.047518198689585144
+        }
+      },
+      "spearman_margins_vs_best_comparator": {
+        "phase2": -0.01510335691693765,
+        "phase3": -0.017015568839248874,
+        "phase4_confirmation": 0.043158454373421695
+      },
+      "minimum_comparator_margin": -0.017015568839248874
+    }
+  ]
+}

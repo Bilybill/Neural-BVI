@@ -1,0 +1,66 @@
+name: tests
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Python 3.11 / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    env:
+      MPLBACKEND: Agg
+      PYTHONUTF8: '1'
+      OMP_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -e ".[dev]"
+      - name: Runtime information
+        run: python -m neural_bvi doctor
+      - name: Lint public interfaces and syntax/hash checks
+        run: |
+          python -m ruff check src tests scripts
+          python scripts/check_repository.py
+      - name: Tests and archived numerical consistency
+        run: |
+          python -m pytest -q --junitxml=outputs/tests.xml
+          python scripts/verify_results.py
+          python scripts/run_paper.py --dry-run
+      - name: Build and test installed wheel
+        run: |
+          python -m build
+          python scripts/test_wheel.py
+          python scripts/build_release.py
+      - name: Save test report
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: test-report-${{ matrix.os }}
+          path: outputs/tests.xml
+          if-no-files-found: ignore
+          retention-days: 14

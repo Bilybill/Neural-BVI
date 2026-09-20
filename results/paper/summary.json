@@ -1,0 +1,1443 @@
+{
+  "status": "complete",
+  "protocol_hash": "e607fc90a9440f4a5c3dc1f5563e08164d7f52b4f0d618d4ff3683e532e277a7",
+  "device": "cuda",
+  "forward_backend": "DeepwavePhysicsSurrogate",
+  "methods": [
+    "nn",
+    "mc_dropout",
+    "deep_ensemble",
+    "residual_map",
+    "residual_laplace",
+    "neural_bvi"
+  ],
+  "splits": [
+    "test"
+  ],
+  "config": {
+    "latent_dim": 12,
+    "pca_train_count": 96,
+    "residual_scale": 0.04,
+    "trust_std": 0.03,
+    "kl_weight": 0.05,
+    "map_latent_prior_weight": 0.6,
+    "components": 2,
+    "bvi_steps": 4,
+    "map_steps": 4,
+    "samples_per_component": 2,
+    "posterior_samples": 128,
+    "mc_samples": 30,
+    "learning_rate": 0.03,
+    "initial_log_std": 0.0,
+    "candidate_batch_size": 2,
+    "initial_component_weight": 0.1,
+    "component_weight_learning_rate": 0.3,
+    "mixture_line_search_samples": 2,
+    "posterior_latent_std": 0.03,
+    "noise_std_floor": 0.01,
+    "laplace_fd_eps": 0.01,
+    "laplace_std_min": 0.0001,
+    "laplace_std_max": 5.0,
+    "laplace_precision_damping": 0.001,
+    "basis_type": "error_pca_mean",
+    "basis_source": "training_errors_only",
+    "latent_prior_source": "training_error_coefficients_only",
+    "neural_center": "ensemble_calibrated",
+    "ensemble_dispersion_scale": 1.8,
+    "mc_dropout_dispersion_scale": 7.5,
+    "posterior_mean_alpha": 1.0,
+    "posterior_mean_policy": "physics_line_search",
+    "posterior_mean_std_threshold": 0.0,
+    "posterior_mean_low_std_alpha": 1.0,
+    "posterior_mean_high_std_alpha": 0.0,
+    "posterior_mean_line_search_alphas": [
+      0.0,
+      0.025,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "posterior_mean_line_search_min_gain": 0.0001,
+    "posterior_std_prior_scale": 0.75
+  },
+  "basis_path": "experiments/bvi_e2e/publication_la010010/full/basis/error_pca_mean_ensemble_calibrated_8f4e3f7dba38_latent12_train96_snrs0-5-10_seed7.pt",
+  "basis_metadata": {
+    "kind": "training_error_pca_basis_v2",
+    "train_count": 96,
+    "data_boundary": "training errors only; no validation or test labels"
+  },
+  "validation_model_count": 10,
+  "validation_case_count_selected": 30,
+  "validation_record_count": 0,
+  "test_model_count": 20,
+  "test_case_count_selected": 60,
+  "test_record_count": 360,
+  "validation_scales": {
+    "mc_dropout": 7.976083234617511,
+    "deep_ensemble": 4.708565913660769,
+    "residual_laplace": 1.912344593926287,
+    "neural_bvi": 0.8191470054346994
+  },
+  "validation_method_summary": {},
+  "method_summary": {
+    "nn": {
+      "record_count": 60,
+      "model_count": 20,
+      "metrics": {
+        "normalized_rmse": {
+          "count": 60,
+          "mean": 0.0850989036882917,
+          "std": 0.020167577556683337
+        },
+        "epsilon_mae": {
+          "count": 60,
+          "mean": 0.4743130112687747,
+          "std": 0.12277409359664085
+        },
+        "data_misfit": {
+          "count": 60,
+          "mean": 0.1613792603214582,
+          "std": 0.04554504521590522
+        },
+        "crps": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "calibrated_coverage_95": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "calibrated_coverage_error": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "calibrated_mpiw_95": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "calibrated_gaussian_crps": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "calibrated_gaussian_nll": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "std_error_spearman": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "ause": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "event_auroc": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "event_auprc": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "event_brier": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "wall_seconds": {
+          "count": 60,
+          "mean": 0.6639509439468384,
+          "std": 0.10974579201535437
+        },
+        "physics_evaluations": {
+          "count": 60,
+          "mean": 1.0,
+          "std": 0.0
+        }
+      }
+    },
+    "mc_dropout": {
+      "record_count": 60,
+      "model_count": 20,
+      "metrics": {
+        "normalized_rmse": {
+          "count": 60,
+          "mean": 0.08502548427067129,
+          "std": 0.01992921345886931
+        },
+        "epsilon_mae": {
+          "count": 60,
+          "mean": 0.4753591054448678,
+          "std": 0.12156804118036
+        },
+        "data_misfit": {
+          "count": 60,
+          "mean": 0.16091036268820366,
+          "std": 0.04561737023725423
+        },
+        "crps": {
+          "count": 60,
+          "mean": 0.05417191241801372,
+          "std": 0.014818464180808654
+        },
+        "calibrated_coverage_95": {
+          "count": 60,
+          "mean": 0.9330635070800781,
+          "std": 0.05626780688548025
+        },
+        "calibrated_coverage_error": {
+          "count": 60,
+          "mean": 0.04208063761393228,
+          "std": 0.041013788195351675
+        },
+        "calibrated_mpiw_95": {
+          "count": 60,
+          "mean": 0.33146631799783177,
+          "std": 0.03149657621280859
+        },
+        "calibrated_gaussian_crps": {
+          "count": 60,
+          "mean": 0.04361910511863362,
+          "std": 0.00994042008663691
+        },
+        "calibrated_gaussian_nll": {
+          "count": 60,
+          "mean": -0.6505842556915737,
+          "std": 1.4022882620609196
+        },
+        "std_error_spearman": {
+          "count": 60,
+          "mean": 0.3128092800165642,
+          "std": 0.17882510928464856
+        },
+        "ause": {
+          "count": 60,
+          "mean": 0.018103229739150295,
+          "std": 0.006607432447750253
+        },
+        "event_auroc": {
+          "count": 60,
+          "mean": 0.9175963956725277,
+          "std": 0.06984960782951026
+        },
+        "event_auprc": {
+          "count": 60,
+          "mean": 0.7258287985780503,
+          "std": 0.21080700480975073
+        },
+        "event_brier": {
+          "count": 60,
+          "mean": 0.00721312431052879,
+          "std": 0.005382794029287064
+        },
+        "wall_seconds": {
+          "count": 60,
+          "mean": 0.9347188591957092,
+          "std": 0.12574108893693534
+        },
+        "physics_evaluations": {
+          "count": 60,
+          "mean": 1.0,
+          "std": 0.0
+        }
+      }
+    },
+    "deep_ensemble": {
+      "record_count": 60,
+      "model_count": 20,
+      "metrics": {
+        "normalized_rmse": {
+          "count": 60,
+          "mean": 0.08165620385089878,
+          "std": 0.019887529734669483
+        },
+        "epsilon_mae": {
+          "count": 60,
+          "mean": 0.46309936567978455,
+          "std": 0.1232054387924082
+        },
+        "data_misfit": {
+          "count": 60,
+          "mean": 0.1498673452064395,
+          "std": 0.04444392259163002
+        },
+        "crps": {
+          "count": 60,
+          "mean": 0.04951821999685701,
+          "std": 0.014441811265012428
+        },
+        "calibrated_coverage_95": {
+          "count": 60,
+          "mean": 0.9407681783040365,
+          "std": 0.0412310772813246
+        },
+        "calibrated_coverage_error": {
+          "count": 60,
+          "mean": 0.03752609252929687,
+          "std": 0.01941701946971454
+        },
+        "calibrated_mpiw_95": {
+          "count": 60,
+          "mean": 0.3819288055414202,
+          "std": 0.047306332287961946
+        },
+        "calibrated_gaussian_crps": {
+          "count": 60,
+          "mean": 0.044241812629814414,
+          "std": 0.009323421625410794
+        },
+        "calibrated_gaussian_nll": {
+          "count": 60,
+          "mean": -0.6683684923129933,
+          "std": 1.5440073190515193
+        },
+        "std_error_spearman": {
+          "count": 60,
+          "mean": 0.3002834311255677,
+          "std": 0.18032901903529253
+        },
+        "ause": {
+          "count": 60,
+          "mean": 0.01800920180231793,
+          "std": 0.006526134086321286
+        },
+        "event_auroc": {
+          "count": 60,
+          "mean": 0.9356818495547464,
+          "std": 0.0704464940631103
+        },
+        "event_auprc": {
+          "count": 60,
+          "mean": 0.7729704442969536,
+          "std": 0.21539871680920644
+        },
+        "event_brier": {
+          "count": 60,
+          "mean": 0.005937367757161458,
+          "std": 0.0046473327027620435
+        },
+        "wall_seconds": {
+          "count": 60,
+          "mean": 0.7438440322875977,
+          "std": 0.12167684842726587
+        },
+        "physics_evaluations": {
+          "count": 60,
+          "mean": 1.0,
+          "std": 0.0
+        }
+      }
+    },
+    "residual_map": {
+      "record_count": 60,
+      "model_count": 20,
+      "metrics": {
+        "normalized_rmse": {
+          "count": 60,
+          "mean": 0.08554909527301788,
+          "std": 0.020245299123110978
+        },
+        "epsilon_mae": {
+          "count": 60,
+          "mean": 0.477893728017807,
+          "std": 0.12369136398928503
+        },
+        "data_misfit": {
+          "count": 60,
+          "mean": 0.15830568795402844,
+          "std": 0.04550820137966539
+        },
+        "crps": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "calibrated_coverage_95": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "calibrated_coverage_error": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "calibrated_mpiw_95": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "calibrated_gaussian_crps": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "calibrated_gaussian_nll": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "std_error_spearman": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "ause": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "event_auroc": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "event_auprc": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "event_brier": {
+          "count": 0,
+          "mean": null,
+          "std": null
+        },
+        "wall_seconds": {
+          "count": 60,
+          "mean": 9.129166917006176,
+          "std": 1.1746923058923502
+        },
+        "physics_evaluations": {
+          "count": 60,
+          "mean": 7.0,
+          "std": 0.0
+        }
+      }
+    },
+    "residual_laplace": {
+      "record_count": 60,
+      "model_count": 20,
+      "metrics": {
+        "normalized_rmse": {
+          "count": 60,
+          "mean": 0.08553750039537669,
+          "std": 0.020138838287747513
+        },
+        "epsilon_mae": {
+          "count": 60,
+          "mean": 0.4792121749756186,
+          "std": 0.12426484535320692
+        },
+        "data_misfit": {
+          "count": 60,
+          "mean": 0.15930420539031426,
+          "std": 0.04584137519515924
+        },
+        "crps": {
+          "count": 60,
+          "mean": 0.04578036002633064,
+          "std": 0.011983492334212668
+        },
+        "calibrated_coverage_95": {
+          "count": 60,
+          "mean": 0.9448135375976563,
+          "std": 0.04980433752990382
+        },
+        "calibrated_coverage_error": {
+          "count": 60,
+          "mean": 0.033846944173177095,
+          "std": 0.03690197554577999
+        },
+        "calibrated_mpiw_95": {
+          "count": 60,
+          "mean": 0.43562234705687325,
+          "std": 0.08382719210799051
+        },
+        "calibrated_gaussian_crps": {
+          "count": 60,
+          "mean": 0.048153158253716286,
+          "std": 0.009207704696254848
+        },
+        "calibrated_gaussian_nll": {
+          "count": 60,
+          "mean": -0.9095141980050426,
+          "std": 0.34811440170420216
+        },
+        "std_error_spearman": {
+          "count": 60,
+          "mean": 0.22196981377013272,
+          "std": 0.23645839932995694
+        },
+        "ause": {
+          "count": 60,
+          "mean": 0.022099037476406867,
+          "std": 0.00872540683608583
+        },
+        "event_auroc": {
+          "count": 60,
+          "mean": 0.9365826559424584,
+          "std": 0.05756006329514466
+        },
+        "event_auprc": {
+          "count": 60,
+          "mean": 0.7313397568306577,
+          "std": 0.21697108224939535
+        },
+        "event_brier": {
+          "count": 60,
+          "mean": 0.010047673822070162,
+          "std": 0.0051634972961767155
+        },
+        "wall_seconds": {
+          "count": 60,
+          "mean": 25.64585646788279,
+          "std": 3.914557026787023
+        },
+        "physics_evaluations": {
+          "count": 60,
+          "mean": 31.0,
+          "std": 0.0
+        }
+      }
+    },
+    "neural_bvi": {
+      "record_count": 60,
+      "model_count": 20,
+      "metrics": {
+        "normalized_rmse": {
+          "count": 60,
+          "mean": 0.08124852094256309,
+          "std": 0.01984627769964295
+        },
+        "epsilon_mae": {
+          "count": 60,
+          "mean": 0.46117793571069476,
+          "std": 0.12241920751500437
+        },
+        "data_misfit": {
+          "count": 60,
+          "mean": 0.14794268763313692,
+          "std": 0.043855391983315256
+        },
+        "crps": {
+          "count": 60,
+          "mean": 0.042392020786650754,
+          "std": 0.009925409674441174
+        },
+        "calibrated_coverage_95": {
+          "count": 60,
+          "mean": 0.9446172078450521,
+          "std": 0.04044849569158036
+        },
+        "calibrated_coverage_error": {
+          "count": 60,
+          "mean": 0.0342510986328125,
+          "std": 0.02217921318578532
+        },
+        "calibrated_mpiw_95": {
+          "count": 60,
+          "mean": 0.290424107112205,
+          "std": 0.020184668247416555
+        },
+        "calibrated_gaussian_crps": {
+          "count": 60,
+          "mean": 0.04182408056247475,
+          "std": 0.01009398780430944
+        },
+        "calibrated_gaussian_nll": {
+          "count": 60,
+          "mean": -1.1731781202881328,
+          "std": 0.32031888801334085
+        },
+        "std_error_spearman": {
+          "count": 60,
+          "mean": 0.3101434707257839,
+          "std": 0.20588393266167068
+        },
+        "ause": {
+          "count": 60,
+          "mean": 0.017160406331883385,
+          "std": 0.006645615661740266
+        },
+        "event_auroc": {
+          "count": 60,
+          "mean": 0.9615861059527814,
+          "std": 0.04880782826152787
+        },
+        "event_auprc": {
+          "count": 60,
+          "mean": 0.7921968055197186,
+          "std": 0.2180227503226108
+        },
+        "event_brier": {
+          "count": 60,
+          "mean": 0.008625985666488608,
+          "std": 0.004649581845906195
+        },
+        "wall_seconds": {
+          "count": 60,
+          "mean": 44.91018716494242,
+          "std": 6.0451660901943916
+        },
+        "physics_evaluations": {
+          "count": 60,
+          "mean": 37.0,
+          "std": 0.0
+        }
+      }
+    }
+  },
+  "clustered_bootstrap": [
+    {
+      "metric": "normalized_rmse",
+      "proposed": "neural_bvi",
+      "baseline": "nn",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.003850382745728617,
+      "ci_low": -0.005724989936378886,
+      "ci_high": -0.001988459721126059,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 16
+    },
+    {
+      "metric": "epsilon_mae",
+      "proposed": "neural_bvi",
+      "baseline": "nn",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.013135075558079915,
+      "ci_low": -0.02523285507180894,
+      "ci_high": -0.0005045976615401663,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 12
+    },
+    {
+      "metric": "data_misfit",
+      "proposed": "neural_bvi",
+      "baseline": "nn",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.013436572688321274,
+      "ci_low": -0.017073847431068625,
+      "ci_high": -0.009944740439144277,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 19
+    },
+    {
+      "metric": "wall_seconds",
+      "proposed": "neural_bvi",
+      "baseline": "nn",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 44.246236220995584,
+      "ci_low": 41.610182316601275,
+      "ci_high": 46.713208840390045,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "physics_evaluations",
+      "proposed": "neural_bvi",
+      "baseline": "nn",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 36.0,
+      "ci_low": 36.0,
+      "ci_high": 36.0,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "normalized_rmse",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0037769633281082016,
+      "ci_low": -0.005520585463222321,
+      "ci_high": -0.002070116935062368,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 16
+    },
+    {
+      "metric": "epsilon_mae",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.01418116973417308,
+      "ci_low": -0.026041365931369614,
+      "ci_high": -0.00229040178158479,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 13
+    },
+    {
+      "metric": "data_misfit",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.012967675055066746,
+      "ci_low": -0.016513551430155836,
+      "ci_high": -0.009607701081161699,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 19
+    },
+    {
+      "metric": "crps",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.011779891631362959,
+      "ci_low": -0.014305419239527236,
+      "ci_high": -0.00934845191401967,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "calibrated_coverage_95",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 0.011553700764973973,
+      "ci_low": -0.004670149485270176,
+      "ci_high": 0.031083774566650416,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 9
+    },
+    {
+      "metric": "calibrated_coverage_error",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.007829538981119792,
+      "ci_low": -0.020632085164388025,
+      "ci_high": 0.0031007995605468676,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 11
+    },
+    {
+      "metric": "calibrated_mpiw_95",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.04104221088562688,
+      "ci_low": -0.051616557722338585,
+      "ci_high": -0.030873802325249094,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "calibrated_gaussian_crps",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.001795024556158859,
+      "ci_low": -0.002639521131997571,
+      "ci_high": -0.0009108444996488624,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 16
+    },
+    {
+      "metric": "calibrated_gaussian_nll",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.5225938645965595,
+      "ci_low": -1.130544717458619,
+      "ci_high": -0.12430508588614868,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 17
+    },
+    {
+      "metric": "std_error_spearman",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0026658092907802327,
+      "ci_low": -0.06554868684506884,
+      "ci_high": 0.05956331508125878,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 10
+    },
+    {
+      "metric": "ause",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0009428234072669055,
+      "ci_low": -0.0025436363982068136,
+      "ci_high": 0.000630465646940341,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 13
+    },
+    {
+      "metric": "event_auroc",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 0.04398971028025376,
+      "ci_low": 0.030352719995385906,
+      "ci_high": 0.058665145318652225,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "event_auprc",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 0.06636800694166808,
+      "ci_low": 0.03967381500541518,
+      "ci_high": 0.09347031803886349,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 19
+    },
+    {
+      "metric": "event_brier",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 0.0014128613559598172,
+      "ci_low": 0.0004795460661924963,
+      "ci_high": 0.0022740046788817616,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 5
+    },
+    {
+      "metric": "wall_seconds",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 43.975468305746716,
+      "ci_low": 41.34864685078461,
+      "ci_high": 46.437044792373975,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "physics_evaluations",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 36.0,
+      "ci_low": 36.0,
+      "ci_high": 36.0,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "normalized_rmse",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.00040768290833568947,
+      "ci_low": -0.0007668006459500723,
+      "ci_high": -0.00010086348557661089,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 15
+    },
+    {
+      "metric": "epsilon_mae",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0019214299690897302,
+      "ci_low": -0.005295875674403175,
+      "ci_high": 0.000994936757099634,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 11
+    },
+    {
+      "metric": "data_misfit",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0019246575733025879,
+      "ci_low": -0.0034920271392911667,
+      "ci_high": -0.0006545357778668431,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 18
+    },
+    {
+      "metric": "crps",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.007126199210206255,
+      "ci_low": -0.009348424676851564,
+      "ci_high": -0.004918542339603918,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "calibrated_coverage_95",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 0.0038490295410156306,
+      "ci_low": -0.00894807815551755,
+      "ci_high": 0.01747972488403321,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 11
+    },
+    {
+      "metric": "calibrated_coverage_error",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.003274993896484379,
+      "ci_low": -0.01206279500325521,
+      "ci_high": 0.0058303883870442635,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 12
+    },
+    {
+      "metric": "calibrated_mpiw_95",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0915046984292153,
+      "ci_low": -0.10940756359144589,
+      "ci_high": -0.0743282632633774,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "calibrated_gaussian_crps",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0024177320673396565,
+      "ci_low": -0.003224413684360269,
+      "ci_high": -0.0016729105833538937,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 18
+    },
+    {
+      "metric": "calibrated_gaussian_nll",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.5048096279751398,
+      "ci_low": -1.162696287604946,
+      "ci_high": -0.13387386258916337,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 19
+    },
+    {
+      "metric": "std_error_spearman",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 0.009860039600216234,
+      "ci_low": -0.05205810937179147,
+      "ci_high": 0.06943623783737711,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 12
+    },
+    {
+      "metric": "ause",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0008487954704345429,
+      "ci_low": -0.0023946024738590453,
+      "ci_high": 0.000641294444942091,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 11
+    },
+    {
+      "metric": "event_auroc",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 0.02590425639803508,
+      "ci_low": 0.01270539250057974,
+      "ci_high": 0.04135182975242726,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 16
+    },
+    {
+      "metric": "event_auprc",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 0.01922636122276502,
+      "ci_low": 0.0070361561311881125,
+      "ci_high": 0.03174106430512898,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 16
+    },
+    {
+      "metric": "event_brier",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 0.00268861790932715,
+      "ci_low": 0.0020110708891724546,
+      "ci_high": 0.003421199984988197,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 0
+    },
+    {
+      "metric": "wall_seconds",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 44.16634313265482,
+      "ci_low": 41.53646492203077,
+      "ci_high": 46.63058787832657,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "physics_evaluations",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 36.0,
+      "ci_low": 36.0,
+      "ci_high": 36.0,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "normalized_rmse",
+      "proposed": "neural_bvi",
+      "baseline": "residual_map",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0043005743304547935,
+      "ci_low": -0.0062186790396479745,
+      "ci_high": -0.0024217067277413607,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 16
+    },
+    {
+      "metric": "epsilon_mae",
+      "proposed": "neural_bvi",
+      "baseline": "residual_map",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.016715792307112246,
+      "ci_low": -0.02973589140301604,
+      "ci_high": -0.0034447110419023306,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 13
+    },
+    {
+      "metric": "data_misfit",
+      "proposed": "neural_bvi",
+      "baseline": "residual_map",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.010363000320891541,
+      "ci_low": -0.01387164618354291,
+      "ci_high": -0.007099196589551869,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 19
+    },
+    {
+      "metric": "wall_seconds",
+      "proposed": "neural_bvi",
+      "baseline": "residual_map",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 35.78102024793624,
+      "ci_low": 33.62084034651518,
+      "ci_high": 37.80833209604023,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "physics_evaluations",
+      "proposed": "neural_bvi",
+      "baseline": "residual_map",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 30.0,
+      "ci_low": 30.0,
+      "ci_high": 30.0,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "normalized_rmse",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.004288979452813608,
+      "ci_low": -0.006229507693356505,
+      "ci_high": -0.002384410324176216,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 16
+    },
+    {
+      "metric": "epsilon_mae",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.01803423926492385,
+      "ci_low": -0.03126746608169512,
+      "ci_high": -0.004342613717815122,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 13
+    },
+    {
+      "metric": "data_misfit",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.011361517757177355,
+      "ci_low": -0.014786565519558887,
+      "ci_high": -0.008142087433176744,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 19
+    },
+    {
+      "metric": "crps",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0033883392396798855,
+      "ci_low": -0.0049727346315760175,
+      "ci_high": -0.0019192419536209857,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 17
+    },
+    {
+      "metric": "calibrated_coverage_95",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.00019632975260416296,
+      "ci_low": -0.013046054840087877,
+      "ci_high": 0.014079004923502596,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 13
+    },
+    {
+      "metric": "calibrated_coverage_error",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 0.0004041544596354057,
+      "ci_low": -0.011930461883544933,
+      "ci_high": 0.01015173721313476,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 6
+    },
+    {
+      "metric": "calibrated_mpiw_95",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.14519823994466835,
+      "ci_low": -0.16343621471806202,
+      "ci_high": -0.12595263174186322,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "calibrated_gaussian_crps",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.006329077691241539,
+      "ci_low": -0.007874652994760116,
+      "ci_high": -0.004800854609410289,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "calibrated_gaussian_nll",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.26366392228309066,
+      "ci_low": -0.34221035445414577,
+      "ci_high": -0.18685202408496043,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 19
+    },
+    {
+      "metric": "std_error_spearman",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 0.0881736569556513,
+      "ci_low": 0.021633582823696308,
+      "ci_high": 0.1571751274111726,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 14
+    },
+    {
+      "metric": "ause",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.004938631144523485,
+      "ci_low": -0.0074413881497168,
+      "ci_high": -0.0026051477519391224,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 16
+    },
+    {
+      "metric": "event_auroc",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 0.025003450010322913,
+      "ci_low": 0.009457403942278397,
+      "ci_high": 0.041052597954636026,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 17
+    },
+    {
+      "metric": "event_auprc",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 0.0608570486890607,
+      "ci_low": 0.024857945830276965,
+      "ci_high": 0.09487965184935185,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 18
+    },
+    {
+      "metric": "event_brier",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0014216881555815537,
+      "ci_low": -0.002251890966823945,
+      "ci_high": -0.0006209275879276295,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 16
+    },
+    {
+      "metric": "wall_seconds",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 19.264330697059627,
+      "ci_low": 18.248706985116005,
+      "ci_high": 20.19229264159997,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 20
+    },
+    {
+      "metric": "physics_evaluations",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 6.0,
+      "ci_low": 6.0,
+      "ci_high": 6.0,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 20
+    }
+  ],
+  "planned_comparisons": [
+    {
+      "research_question": "RQ1_reconstruction",
+      "role": "primary",
+      "metric": "normalized_rmse",
+      "proposed": "neural_bvi",
+      "baseline": "nn",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.003850382745728617,
+      "ci_low": -0.005724989936378886,
+      "ci_high": -0.001988459721126059,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 16
+    },
+    {
+      "research_question": "RQ1_reconstruction",
+      "role": "secondary",
+      "metric": "epsilon_mae",
+      "proposed": "neural_bvi",
+      "baseline": "nn",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.013135075558079915,
+      "ci_low": -0.02523285507180894,
+      "ci_high": -0.0005045976615401663,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 12
+    },
+    {
+      "research_question": "RQ1_reconstruction",
+      "role": "secondary",
+      "metric": "data_misfit",
+      "proposed": "neural_bvi",
+      "baseline": "nn",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.013436572688321274,
+      "ci_low": -0.017073847431068625,
+      "ci_high": -0.009944740439144277,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 19
+    },
+    {
+      "research_question": "RQ2_neural_uq",
+      "role": "primary",
+      "metric": "crps",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.011779891631362959,
+      "ci_low": -0.014305419239527236,
+      "ci_high": -0.00934845191401967,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 20
+    },
+    {
+      "research_question": "RQ2_neural_uq",
+      "role": "primary",
+      "metric": "crps",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.007126199210206255,
+      "ci_low": -0.009348424676851564,
+      "ci_high": -0.004918542339603918,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 20
+    },
+    {
+      "research_question": "RQ2_neural_uq",
+      "role": "secondary",
+      "metric": "calibrated_gaussian_crps",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.001795024556158859,
+      "ci_low": -0.002639521131997571,
+      "ci_high": -0.0009108444996488624,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 16
+    },
+    {
+      "research_question": "RQ2_neural_uq",
+      "role": "secondary",
+      "metric": "calibrated_gaussian_crps",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0024177320673396565,
+      "ci_low": -0.003224413684360269,
+      "ci_high": -0.0016729105833538937,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 18
+    },
+    {
+      "research_question": "RQ2_neural_uq",
+      "role": "secondary",
+      "metric": "calibrated_coverage_error",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.007829538981119792,
+      "ci_low": -0.020632085164388025,
+      "ci_high": 0.0031007995605468676,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 11
+    },
+    {
+      "research_question": "RQ2_neural_uq",
+      "role": "secondary",
+      "metric": "calibrated_coverage_error",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.003274993896484379,
+      "ci_low": -0.01206279500325521,
+      "ci_high": 0.0058303883870442635,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 12
+    },
+    {
+      "research_question": "RQ2_neural_uq",
+      "role": "secondary",
+      "metric": "std_error_spearman",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0026658092907802327,
+      "ci_low": -0.06554868684506884,
+      "ci_high": 0.05956331508125878,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 10
+    },
+    {
+      "research_question": "RQ2_neural_uq",
+      "role": "secondary",
+      "metric": "std_error_spearman",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": 0.009860039600216234,
+      "ci_low": -0.05205810937179147,
+      "ci_high": 0.06943623783737711,
+      "favorable_direction": "positive",
+      "proposed_better_model_count": 12
+    },
+    {
+      "research_question": "RQ2_neural_uq",
+      "role": "secondary",
+      "metric": "ause",
+      "proposed": "neural_bvi",
+      "baseline": "mc_dropout",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0009428234072669055,
+      "ci_low": -0.0025436363982068136,
+      "ci_high": 0.000630465646940341,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 13
+    },
+    {
+      "research_question": "RQ2_neural_uq",
+      "role": "secondary",
+      "metric": "ause",
+      "proposed": "neural_bvi",
+      "baseline": "deep_ensemble",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0008487954704345429,
+      "ci_low": -0.0023946024738590453,
+      "ci_high": 0.000641294444942091,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 11
+    },
+    {
+      "research_question": "RQ2_physics_uq",
+      "role": "secondary",
+      "metric": "crps",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.0033883392396798855,
+      "ci_low": -0.0049727346315760175,
+      "ci_high": -0.0019192419536209857,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 17
+    },
+    {
+      "research_question": "RQ2_physics_uq",
+      "role": "secondary",
+      "metric": "ause",
+      "proposed": "neural_bvi",
+      "baseline": "residual_laplace",
+      "model_count": 20,
+      "difference_proposed_minus_baseline": -0.004938631144523485,
+      "ci_low": -0.0074413881497168,
+      "ci_high": -0.0026051477519391224,
+      "favorable_direction": "negative",
+      "proposed_better_model_count": 16
+    }
+  ],
+  "metrics_path": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase5/final_holdout/metrics.csv",
+  "comparison_table": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase5/final_holdout/comparison_table.csv",
+  "planned_comparison_table": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase5/final_holdout/planned_comparisons.csv",
+  "run_spec": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase5/final_holdout/run_spec.json",
+  "seconds": 4933.551003456116,
+  "claim_boundary": "Noise views are repeated measurements of each subsurface model. Confidence intervals cluster by model. The scalar-wave matched-physics benchmark does not establish electromagnetic model-mismatch robustness."
+}

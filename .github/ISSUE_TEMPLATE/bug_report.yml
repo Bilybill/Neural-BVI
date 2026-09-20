@@ -1,0 +1,24 @@
+name: Bug report
+description: Report a reproducible software problem
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Include the command, seed and configuration. Do not upload private data or checkpoints.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Paste python -m neural_bvi doctor output and the commit/version.
+      render: text
+    validations:
+      required: true

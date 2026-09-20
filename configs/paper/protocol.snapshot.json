@@ -1,0 +1,186 @@
+{
+  "protocol_version": "la010010-publication-v1",
+  "dataset_manifest": "experiments/bvi_e2e/datasets/deepwave_la010010_256/manifest.json",
+  "acquisition_profile": "experiments/bvi_e2e/acquisition_profiles.json",
+  "field_root": "../Field_GPR_DATA.lnk",
+  "output_root": "experiments/bvi_e2e/publication_la010010",
+  "split": {
+    "seed": 7,
+    "train": 700,
+    "validation": 150,
+    "test": 150
+  },
+  "training_seeds": [
+    7,
+    71,
+    711
+  ],
+  "ensemble_seeds": [
+    7,
+    71,
+    711,
+    1701,
+    2701
+  ],
+  "backbones": [
+    "unet",
+    "unetpp",
+    "transunet",
+    "tinynet"
+  ],
+  "primary_backbone": "unet",
+  "noise": {
+    "train_mode": "mixed",
+    "train_snr_db": [
+      0.0,
+      10.0
+    ],
+    "field_weight": 0.7,
+    "gaussian_weight": 0.3,
+    "evaluation_snrs_db": [
+      0.0,
+      5.0,
+      10.0
+    ],
+    "evaluation_seed": 20260706
+  },
+  "training": {
+    "epochs": 100,
+    "batch_size": 4,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 5,
+    "early_stopping_patience": 15,
+    "gradient_loss_weight": 0.05,
+    "amp": true,
+    "num_workers": 0
+  },
+  "forward_surrogate": {
+    "epochs": 100,
+    "batch_size": 8,
+    "learning_rate": 0.0004,
+    "min_learning_rate": 4e-05,
+    "weight_decay": 5e-05,
+    "early_stopping_patience": 25,
+    "ensemble_seeds": [
+      1301,
+      1302,
+      1303,
+      1304,
+      1305,
+      1306,
+      1307,
+      1308,
+      1309,
+      1310
+    ],
+    "reflectivity_features": true,
+    "horizontal_flip_augmentation": true,
+    "high_energy_loss_weight": 0.15,
+    "low_energy_loss_weight": 0.1,
+    "gradient_loss_weight": 0.01,
+    "spectral_loss_weight": 0.0005,
+    "grad_clip_norm": 1.0,
+    "validation_nrmse_max": 0.15,
+    "validation_pearson_min": 0.9
+  },
+  "uq": {
+    "validation_models": 10,
+    "test_models": 10,
+    "snrs_db": [
+      0.0,
+      5.0,
+      10.0
+    ],
+    "posterior_samples": 512,
+    "mc_dropout_samples": 30,
+    "event_threshold_normalized": 0.5,
+    "legacy_event_threshold_normalized": 0.35,
+    "base": {
+      "components": 3,
+      "latent_dim": 12,
+      "residual_scale": 0.04,
+      "model_prior_std": 0.03,
+      "kl_weight": 0.02,
+      "steps": 180,
+      "samples_per_component": 8,
+      "basis_type": "cosine"
+    },
+    "candidates": [
+      {
+        "name": "base"
+      },
+      {
+        "name": "k1",
+        "components": 1
+      },
+      {
+        "name": "k5",
+        "components": 5
+      },
+      {
+        "name": "latent8",
+        "latent_dim": 8
+      },
+      {
+        "name": "latent24",
+        "latent_dim": 24
+      },
+      {
+        "name": "residual002",
+        "residual_scale": 0.02
+      },
+      {
+        "name": "residual008",
+        "residual_scale": 0.08
+      },
+      {
+        "name": "trust002",
+        "model_prior_std": 0.02
+      },
+      {
+        "name": "trust005",
+        "model_prior_std": 0.05
+      },
+      {
+        "name": "kl001",
+        "kl_weight": 0.01
+      },
+      {
+        "name": "kl005",
+        "kl_weight": 0.05
+      },
+      {
+        "name": "mixed_basis",
+        "basis_type": "mixed"
+      },
+      {
+        "name": "no_trust",
+        "model_prior_std": 0.0
+      }
+    ]
+  },
+  "ood": {
+    "seed": 20260706,
+    "per_class": 20,
+    "classes": [
+      "single_pipe",
+      "double_pipe",
+      "low_eps_void",
+      "dipping_interface"
+    ],
+    "frequency_hz": [
+      400000000.0,
+      480000000.0,
+      600000000.0
+    ]
+  },
+  "statistics": {
+    "bootstrap_resamples": 10000,
+    "confidence": 0.95,
+    "holm_alpha": 0.05,
+    "primary_metric": "epsilon_rmse"
+  },
+  "protocol_path": "experiments/bvi_e2e/la010010_protocol.json",
+  "protocol_hash": "e607fc90a9440f4a5c3dc1f5563e08164d7f52b4f0d618d4ff3683e532e277a7"
+}

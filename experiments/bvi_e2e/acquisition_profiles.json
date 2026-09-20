@@ -1,0 +1,278 @@
+{
+  "la010010_pipe_native": {
+    "description": "Native LA010010 pipe-window acquisition used as the primary measured-data experiment.",
+    "ready": true,
+    "model_shape": [
+      256,
+      256
+    ],
+    "model_domain": {
+      "width_m": 3.5328,
+      "target_depth_m": 2.5,
+      "left_margin_m": 0.0256,
+      "lateral_margin_m": 0.0256,
+      "depth_basis": "2.5-m migration depth used by the prior LA010010 experiment"
+    },
+    "observation": {
+      "n_time": 179,
+      "n_traces": 137,
+      "sample_interval_s": 3.90625e-10,
+      "time_window_s": 6.9921875e-08,
+      "trace_spacing_m": 0.0256,
+      "aperture_m": 3.4816,
+      "tx_rx_offset_m": 0.0,
+      "tx_rx_offset_status": "RAD ANTENNA SEPARATION is 0.0000; scalar zero-offset approximation",
+      "antenna_depth_m": 0.01953125,
+      "antenna_depth_status": "two-cell numerical injection depth; physical antenna standoff is not reported",
+      "geometry": "common_offset"
+    },
+    "source": {
+      "wavelet": "blackman_harris_derivative",
+      "center_frequency_hz": 480000000.0,
+      "frequency_status": "estimated dominant frequency (479.9999 MHz) from the LA010010 direct arrival; 400 MHz was used only by the prior RTM configuration"
+    },
+    "preprocessing": {
+      "dc_removal": true,
+      "bandpass_butterworth_hz": [
+        32000000.0,
+        620000000.0
+      ],
+      "bandpass_order": 4,
+      "background_subtraction": "median",
+      "clip_percentile": 99.5
+    },
+    "field_reference": {
+      "relative_rad_path": "Data Set/pipe/0701/ASCII_707-01/ASCII/LA010010.RAD",
+      "expected_raw_samples": 486,
+      "expected_raw_traces": 745,
+      "expected_raw_time_window_ns": 189.8438,
+      "expected_trace_spacing_m": 0.0256,
+      "crop_mode": "fixed_native",
+      "sample_start": 0,
+      "sample_end": 179,
+      "trace_start": 78,
+      "trace_end": 215,
+      "start_distance_m": 2.0
+    },
+    "noise": {
+      "enabled": true,
+      "random_seed": 7,
+      "snr_sampling": "uniform_per_model",
+      "snr_db_range": [
+        0.0,
+        10.0
+      ],
+      "field_weight": 0.7,
+      "gaussian_weight": 0.3,
+      "residual_extractor": "nlm_bm3d_mean",
+      "nlm_patch_size": 5,
+      "nlm_patch_distance": 7,
+      "nlm_h_factor": 0.85,
+      "bm3d_sigma_factor": 0.85,
+      "sources": [
+        {
+          "key": "pipe_la020014",
+          "relative_rad_path": "Data Set/pipe/0701/ASCII_707-01/ASCII/LA020014.RAD",
+          "sample_start": 0,
+          "sample_end": 179,
+          "trace_start": 273,
+          "trace_end": 410
+        },
+        {
+          "key": "pipe_la020015",
+          "relative_rad_path": "Data Set/pipe/0701/ASCII_707-01/ASCII/LA020015.RAD",
+          "sample_start": 0,
+          "sample_end": 179,
+          "trace_start": 0,
+          "trace_end": 137
+        },
+        {
+          "key": "pipe_la020010",
+          "relative_rad_path": "Data Set/pipe/0701/ASCII_707-01/ASCII/LA020010.RAD",
+          "sample_start": 0,
+          "sample_end": 179,
+          "trace_start": 0,
+          "trace_end": 137
+        },
+        {
+          "key": "pipe_0806_la010008",
+          "relative_rad_path": "Data Set/pipe/0806/LA010008.RAD",
+          "sample_start": 0,
+          "sample_end": 179,
+          "trace_start": 234,
+          "trace_end": 371
+        }
+      ]
+    },
+    "evidence": {
+      "dataset": "LA010010.RD3 / LA010010.RAD",
+      "raw_shape": [
+        486,
+        745
+      ],
+      "raw_time_window_ns": 189.8438,
+      "crop_shape": [
+        179,
+        137
+      ],
+      "crop_time_window_ns": 69.921875,
+      "crop_start_m": 2.0,
+      "crop_aperture_m": 3.4816,
+      "rad_frequency_field_mhz": 2560.0,
+      "rad_frequency_interpretation": "sampling frequency, not antenna centre frequency",
+      "prior_rtm_frequency_mhz": 400.0,
+      "estimated_direct_arrival_frequency_mhz": 479.9999
+    }
+  },
+  "ramac_200ns": {
+    "description": "RAMAC/RD3 common-offset window matched to the dominant pipe profiles.",
+    "ready": true,
+    "model_shape": [
+      256,
+      256
+    ],
+    "model_domain": {
+      "width_m": 6.5536,
+      "depth_m": 8.0,
+      "left_margin_m": 0.0
+    },
+    "observation": {
+      "n_time": 512,
+      "n_traces": 256,
+      "sample_interval_s": 3.90625e-10,
+      "time_window_s": 2e-07,
+      "trace_spacing_m": 0.0256,
+      "tx_rx_offset_m": 0.0,
+      "antenna_depth_m": 0.0625,
+      "geometry": "common_offset"
+    },
+    "source": {
+      "wavelet": "blackman_harris_derivative",
+      "center_frequency_hz": null,
+      "frequency_status": "must_be_confirmed_from_acquisition_metadata_or_supplied_explicitly"
+    },
+    "preprocessing": {
+      "dewow_samples": 81,
+      "background_subtraction": true,
+      "sqrt_time_gain": true,
+      "clip_percentile": 99.0
+    },
+    "evidence": {
+      "representative_samples": 512,
+      "representative_time_window_ns": 200.0,
+      "representative_trace_spacing_m": 0.0256,
+      "rad_frequency_field_mhz": 2560.0,
+      "rad_frequency_interpretation": "sampling_frequency_not_antenna_center_frequency"
+    }
+  },
+  "ljysh_ygj_600mhz_30ns": {
+    "description": "Liangjiaying shield-tunnel right-shoulder field system used as the primary measured-data experiment.",
+    "ready": true,
+    "model_shape": [
+      256,
+      256
+    ],
+    "model_domain": {
+      "width_m": 2.56,
+      "target_depth_m": 1.2,
+      "left_margin_m": 0.0,
+      "fixed_layers": [
+        {
+          "name": "air_standoff",
+          "thickness_m": 0.05,
+          "relative_permittivity": 1.0
+        },
+        {
+          "name": "concrete_lining",
+          "thickness_m": 0.3,
+          "relative_permittivity": 9.0
+        }
+      ]
+    },
+    "observation": {
+      "n_time": 512,
+      "n_traces": 256,
+      "sample_interval_s": 5.859375e-11,
+      "time_window_s": 3e-08,
+      "trace_spacing_m": 0.01,
+      "tx_rx_offset_m": 0.0,
+      "tx_rx_offset_status": "zero-offset scalar approximation; commercial shielded-antenna separation is not reported",
+      "antenna_depth_m": 0.01,
+      "antenna_standoff_m": 0.05,
+      "geometry": "longitudinal_common_offset"
+    },
+    "source": {
+      "wavelet": "blackman_harris_derivative",
+      "center_frequency_hz": 600000000.0,
+      "frequency_status": "reported by the companion field-experiment paper"
+    },
+    "preprocessing": {
+      "dc_removal": true,
+      "background_subtraction": false,
+      "gain": "linear",
+      "linear_gain_end": 4.0,
+      "bandpass_trapezoid_fc": [
+        0.1,
+        0.3,
+        1.2,
+        1.6
+      ],
+      "time_zero_correction": true,
+      "time_zero_search_samples": 96,
+      "clip_percentile": 99.5
+    },
+    "evidence": {
+      "dataset": "LJYSH/YGJ (Liangjiaying right shoulder), IDS .dt",
+      "local_trace_count": 53317,
+      "local_length_m": 533.17,
+      "paper_field_line_length_m": 540.0,
+      "paper_center_frequency_mhz": 600.0,
+      "paper_time_window_ns": 30.0,
+      "paper_trace_spacing_m": 0.01,
+      "paper_antenna_standoff_m": 0.05,
+      "paper_concrete_thickness_m": 0.3,
+      "paper_concrete_velocity_m_per_ns": 0.1,
+      "parser_record_layout": "4-byte trace header + 512 little-endian int16 samples"
+    }
+  },
+  "zry_pillar": {
+    "description": "ZRY pillar profile. Not simulation-ready until units and antenna metadata are confirmed.",
+    "ready": false,
+    "model_shape": [
+      256,
+      256
+    ],
+    "observation": {
+      "n_time_raw": 2048,
+      "n_traces_raw": 1599,
+      "sample_interval_header": 3.908158302307129,
+      "trace_spacing_header": 9.96875
+    },
+    "missing": [
+      "sample_interval_unit",
+      "trace_spacing_unit",
+      "antenna_center_frequency_hz",
+      "tx_rx_offset_m"
+    ]
+  },
+  "zry_grass": {
+    "description": "ZRY grass profile. Kept separate because its sample interval differs from the pillar profile.",
+    "ready": false,
+    "model_shape": [
+      256,
+      256
+    ],
+    "observation": {
+      "n_time_raw": 2048,
+      "n_traces_raw": 265,
+      "sample_interval_header": 14.655593872070312,
+      "trace_spacing_header": 9.96875
+    },
+    "missing": [
+      "sample_interval_unit",
+      "trace_spacing_unit",
+      "antenna_center_frequency_hz",
+      "tx_rx_offset_m"
+    ]
+  }
+}

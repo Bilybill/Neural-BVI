@@ -1,0 +1,70 @@
+{
+  "status": "frozen_before_final_holdout",
+  "strict_success_rule": {
+    "image_nrmse": "Neural-BVI mean is strictly lower than every other method.",
+    "data_rmse": "Neural-BVI mean is strictly lower than every other method.",
+    "empirical_crps": "Neural-BVI mean is strictly lower than every other UQ method.",
+    "coverage_error": "Absolute difference between mean calibrated coverage and 0.95 is strictly lower than every other UQ method.",
+    "std_error_spearman": "Neural-BVI mean is strictly higher than every other UQ method."
+  },
+  "methods": [
+    "nn",
+    "mc_dropout",
+    "deep_ensemble",
+    "residual_map",
+    "residual_laplace",
+    "neural_bvi"
+  ],
+  "test_local_indices": [
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+  ],
+  "configuration": {
+    "neural_center": "ensemble_calibrated",
+    "ensemble_dispersion_scale": 1.8,
+    "mc_dropout_dispersion_scale": 7.5,
+    "posterior_mean_policy": "physics_line_search",
+    "posterior_mean_line_search_alphas": [
+      0.0,
+      0.025,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "posterior_mean_line_search_min_gain": 0.0001,
+    "components": 2,
+    "bvi_steps": 4,
+    "map_steps": 4,
+    "samples_per_component": 2,
+    "posterior_samples": 128,
+    "mixture_line_search_samples": 2,
+    "mc_samples": 30,
+    "seed": 7
+  },
+  "runner_sha256": "a235c9dce8a7edb8c437a549cf3d2487405486588ed20888c2f5b157f3a0a47a",
+  "ensemble_center_json_sha256": "8f4e3f7dba38ebaacdcb8d58d927b0cee4b0aefcbcf3d68b70452c4378499c5c",
+  "ensemble_center_map_sha256": "498156105da8fd0fa2008b367f5dd5bd40124b5ee02f8c2adafc42c4e307f83a",
+  "posterior_std_prior_json_sha256": "60b6b1d5468f94bf7ecb4bf31b89449827ab1a16677fb0ab2feb89b3901cf53b",
+  "posterior_std_prior_map_sha256": "48b4461655807ee8c649cd1de5393176e1506faca4a69eee5c60fe67c788a553",
+  "calibration_json_sha256": "2ccd1327c0b51dcaa4b3c9c804d53007c5d59efeedc01b3604653e49f06702c5",
+  "calibration_policy": "Global Neural-BVI scale fitted by grouped leave-one-model-out bias correction on the exposed Phase-4 development block.",
+  "post_holdout_adaptation_allowed": false
+}

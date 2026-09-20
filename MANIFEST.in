@@ -1,0 +1,15 @@
+include *.md *.cff *.txt .gitignore .gitattributes
+include LICENSE NOTICE
+recursive-include src *.py
+recursive-include experiments/bvi_e2e *.py *.json
+recursive-include configs *.json *.npz
+recursive-include results *.json *.csv
+recursive-include provenance *.json
+recursive-include docs *.md *.png
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include .github *.yml *.yaml *.md
+include data/README.md
+global-exclude *.pyc *.pyo
+prune experiments/bvi_e2e/publication_la010010
+prune experiments/bvi_e2e/datasets

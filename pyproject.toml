@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neural-bvi-gpr"
+version = "0.1.0"
+description = "Neural initialization and boosting variational inference for GPR inversion"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
+authors = [{name = "Xintong Liu"}, {name = "Qiyang Pi"}, {name = "Yonghao Wang"}]
+dependencies = ["numpy>=2.1,<3", "scipy>=1.15,<2", "torch>=2.8,<3", "deepwave==0.0.27", "matplotlib>=3.10,<4", "scikit-image>=0.25,<1"]
+
+[project.urls]
+Repository = "https://github.com/Bilybill/Neural-BVI"
+Issues = "https://github.com/Bilybill/Neural-BVI/issues"
+
+[project.optional-dependencies]
+field = ["bm3d==4.0.3"]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1", "build>=1.2,<2", "pyyaml>=6,<7"]
+
+[project.scripts]
+neural-bvi = "neural_bvi.cli:main"
+
+[tool.setuptools]
+packages = ["neural_bvi"]
+py-modules = ["build_deepwave_dataset", "deepwave_dataset", "deepwave_physics_gradient_check", "deepwave_physics_surrogate", "e2e_bvi_gpr", "fdtd_validation", "field_bvi_gpr", "finalize_field_conditioned_uq", "finalize_hyperbola_conditioned_field_bvi", "finalize_joint_early_layered_field_bvi", "finalize_shallow_reconciled_field_bvi", "inversion_models", "make_field_hyperbola_morphology_figure", "make_unified_neural_bvi_results", "path_utils", "publication_data", "publication_metrics", "publication_report", "publication_training", "publication_transfer", "publication_uq", "ramac_field_validation", "run_deepwave_field_fwi", "run_deepwave_field_laplace", "run_deepwave_map_bvi_synthetic", "run_field_conditioned_uq", "run_field_joint_early_layered_bvi", "run_la010010_publication", "run_unified_neural_bvi_comparison"]
+
+[tool.setuptools.package-dir]
+"" = "experiments/bvi_e2e"
+neural_bvi = "src/neural_bvi"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+include = ["src/**/*.py", "tests/**/*.py", "scripts/**/*.py"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

@@ -1,0 +1,11 @@
+Neural-BVI
+Copyright 2026 Neural-BVI contributors.
+
+Licensed under the Apache License, Version 2.0.
+
+Research software accompanying Neural-BVI, by Xintong Liu,
+Qiyang Pi, and Yonghao Wang.
+
+Source provenance and export transformations are recorded in
+provenance/source_manifest.json. Separately installed dependencies
+retain their own licenses; see THIRD_PARTY_NOTICES.md.

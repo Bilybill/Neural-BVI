@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "source": "experiments/bvi_e2e/build_deepwave_dataset.py",
+      "destination": "experiments/bvi_e2e/build_deepwave_dataset.py",
+      "source_sha256": "ca6639a0e75c15b0a623308f79001a92222b200e84d9c7af1e078284b7fe6f5b",
+      "export_sha256": "67bf1c863db4f56aadfc9bf40189ec538d4bbddd922580e1773df7ba23cafde6",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/deepwave_dataset.py",
+      "destination": "experiments/bvi_e2e/deepwave_dataset.py",
+      "source_sha256": "187d26c7acf3ab223a37016c25912dc409cdcd1db14369ed1ad9731c1be9638d",
+      "export_sha256": "187d26c7acf3ab223a37016c25912dc409cdcd1db14369ed1ad9731c1be9638d",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/deepwave_physics_gradient_check.py",
+      "destination": "experiments/bvi_e2e/deepwave_physics_gradient_check.py",
+      "source_sha256": "34db7807d4686c981715b2fcfdf044e48dde636ee35bbfc53e442855606e1e26",
+      "export_sha256": "34db7807d4686c981715b2fcfdf044e48dde636ee35bbfc53e442855606e1e26",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/deepwave_physics_surrogate.py",
+      "destination": "experiments/bvi_e2e/deepwave_physics_surrogate.py",
+      "source_sha256": "46dae366fa062b5696bddab2348c930a431895f4ecdcafb1eb90b1239465ca62",
+      "export_sha256": "46dae366fa062b5696bddab2348c930a431895f4ecdcafb1eb90b1239465ca62",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/e2e_bvi_gpr.py",
+      "destination": "experiments/bvi_e2e/e2e_bvi_gpr.py",
+      "source_sha256": "d408a89a3521ffb6c212e75f5022c60d8e1a0e84bab1e2b14a47f5b4be81f205",
+      "export_sha256": "d408a89a3521ffb6c212e75f5022c60d8e1a0e84bab1e2b14a47f5b4be81f205",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/fdtd_validation.py",
+      "destination": "experiments/bvi_e2e/fdtd_validation.py",
+      "source_sha256": "79898bc1f82da235ae9e3d1fed1d2096364b1472587553e1d73574bd6b1892fe",
+      "export_sha256": "79898bc1f82da235ae9e3d1fed1d2096364b1472587553e1d73574bd6b1892fe",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/field_bvi_gpr.py",
+      "destination": "experiments/bvi_e2e/field_bvi_gpr.py",
+      "source_sha256": "87ac4a14edc0e4fa1389e3dcf91e2d9b9a5d441638e8aa6a91fb0ce29e7e5ff6",
+      "export_sha256": "7549c87554cf69e2768bf826ea080b6fba1e23b4eb3b23132ced1d76c69905df",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/finalize_field_conditioned_uq.py",
+      "destination": "experiments/bvi_e2e/finalize_field_conditioned_uq.py",
+      "source_sha256": "077f72480f8d154b7b4d481d2b9068ca48e22104458b39ef5b66f0c9fd99fae8",
+      "export_sha256": "077f72480f8d154b7b4d481d2b9068ca48e22104458b39ef5b66f0c9fd99fae8",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/finalize_hyperbola_conditioned_field_bvi.py",
+      "destination": "experiments/bvi_e2e/finalize_hyperbola_conditioned_field_bvi.py",
+      "source_sha256": "9f7c5b604c46061985aefedfe70d20823cfd8609b0ac548c29ca4a556b402e7d",
+      "export_sha256": "9f7c5b604c46061985aefedfe70d20823cfd8609b0ac548c29ca4a556b402e7d",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/finalize_joint_early_layered_field_bvi.py",
+      "destination": "experiments/bvi_e2e/finalize_joint_early_layered_field_bvi.py",
+      "source_sha256": "7656bc7b78aa624bdf5aae39dafbbdeb8a2c99016593bdd384d8ba1ce423ed8c",
+      "export_sha256": "7656bc7b78aa624bdf5aae39dafbbdeb8a2c99016593bdd384d8ba1ce423ed8c",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/finalize_shallow_reconciled_field_bvi.py",
+      "destination": "experiments/bvi_e2e/finalize_shallow_reconciled_field_bvi.py",
+      "source_sha256": "1e716cebe54ebed8f807be98119416ad1b469c8adde43039ab0482739d9a7d24",
+      "export_sha256": "1e716cebe54ebed8f807be98119416ad1b469c8adde43039ab0482739d9a7d24",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/inversion_models.py",
+      "destination": "experiments/bvi_e2e/inversion_models.py",
+      "source_sha256": "c7c6f31ef572cbf6d473c4187a7cddade18e43a6d3a76963a2301ff0bee4c15c",
+      "export_sha256": "c7c6f31ef572cbf6d473c4187a7cddade18e43a6d3a76963a2301ff0bee4c15c",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/make_field_hyperbola_morphology_figure.py",
+      "destination": "experiments/bvi_e2e/make_field_hyperbola_morphology_figure.py",
+      "source_sha256": "37c06683059e6500236477df02ca449682a7f0d3b152056dbfb91a3798e1d5a2",
+      "export_sha256": "37c06683059e6500236477df02ca449682a7f0d3b152056dbfb91a3798e1d5a2",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/make_unified_neural_bvi_results.py",
+      "destination": "experiments/bvi_e2e/make_unified_neural_bvi_results.py",
+      "source_sha256": "d4297731e286cd7c35ceb3225a21c66da10065fd9ac485ed7d421fc4601b808d",
+      "export_sha256": "d4297731e286cd7c35ceb3225a21c66da10065fd9ac485ed7d421fc4601b808d",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/path_utils.py",
+      "destination": "experiments/bvi_e2e/path_utils.py",
+      "source_sha256": "cb1375524890bc95f2db2d4c14c0c0fd4c6939e9dee9ae3c4ec458178bae1a50",
+      "export_sha256": "c158d0570549c5c6da8e891b4ed71e926cb5f72fd46a2e72d08420db2909bdef",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_data.py",
+      "destination": "experiments/bvi_e2e/publication_data.py",
+      "source_sha256": "cbe3f6215b4f7acef73c7a899abe49cd1f5088d4271e6252d24744896098fefb",
+      "export_sha256": "cbe3f6215b4f7acef73c7a899abe49cd1f5088d4271e6252d24744896098fefb",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_metrics.py",
+      "destination": "experiments/bvi_e2e/publication_metrics.py",
+      "source_sha256": "c9a6428dca1f25044711a0ec40f7f83daafe9a362993e7308eac28e00452157b",
+      "export_sha256": "c9a6428dca1f25044711a0ec40f7f83daafe9a362993e7308eac28e00452157b",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_report.py",
+      "destination": "experiments/bvi_e2e/publication_report.py",
+      "source_sha256": "78fcacf4b7e6c0fa6107ddbddbdaaa30a73a12a20615029eadb4e3e15c95d545",
+      "export_sha256": "78fcacf4b7e6c0fa6107ddbddbdaaa30a73a12a20615029eadb4e3e15c95d545",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_training.py",
+      "destination": "experiments/bvi_e2e/publication_training.py",
+      "source_sha256": "59e88f6736dd15635933c2d983b5b66db9cf898a575c4d884e48620d69bccc00",
+      "export_sha256": "59e88f6736dd15635933c2d983b5b66db9cf898a575c4d884e48620d69bccc00",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_transfer.py",
+      "destination": "experiments/bvi_e2e/publication_transfer.py",
+      "source_sha256": "5f93e09aa61d27af73a0313ee7791ae42870f143591274efaf164e57a98c4986",
+      "export_sha256": "5f93e09aa61d27af73a0313ee7791ae42870f143591274efaf164e57a98c4986",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_uq.py",
+      "destination": "experiments/bvi_e2e/publication_uq.py",
+      "source_sha256": "4d834bc69f549ced128c17737a3297e3f7285fd2179d6b77ab0683318039f248",
+      "export_sha256": "4d834bc69f549ced128c17737a3297e3f7285fd2179d6b77ab0683318039f248",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/ramac_field_validation.py",
+      "destination": "experiments/bvi_e2e/ramac_field_validation.py",
+      "source_sha256": "5b42c53f66f32948c8b6555da6792c62fa27bf2c514838cfe0ba4f529ec43bf2",
+      "export_sha256": "ce3c92617db30f2a878f43f064e5f48b7a2187e40ee07048f20a48c746d4fade",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/run_deepwave_field_fwi.py",
+      "destination": "experiments/bvi_e2e/run_deepwave_field_fwi.py",
+      "source_sha256": "dc93cd41fd56fe91bbb10ba047c7d2df3d19e828dd367c78024f352ce7b40ac4",
+      "export_sha256": "dc93cd41fd56fe91bbb10ba047c7d2df3d19e828dd367c78024f352ce7b40ac4",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/run_deepwave_field_laplace.py",
+      "destination": "experiments/bvi_e2e/run_deepwave_field_laplace.py",
+      "source_sha256": "ac29bdacca86ad493e91067d1a4669c9eaf2e55ae89dcd20ff414548b95bba78",
+      "export_sha256": "ac29bdacca86ad493e91067d1a4669c9eaf2e55ae89dcd20ff414548b95bba78",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/run_deepwave_map_bvi_synthetic.py",
+      "destination": "experiments/bvi_e2e/run_deepwave_map_bvi_synthetic.py",
+      "source_sha256": "cbdcc43e1048e0e6b06010e283957f6cd2e9aaad0a891242a903865df9af2a1b",
+      "export_sha256": "cbdcc43e1048e0e6b06010e283957f6cd2e9aaad0a891242a903865df9af2a1b",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/run_field_conditioned_uq.py",
+      "destination": "experiments/bvi_e2e/run_field_conditioned_uq.py",
+      "source_sha256": "eab406cce708c29e11883591bfc62c54ce0db063b49ed71f3d3534371be094cf",
+      "export_sha256": "eab406cce708c29e11883591bfc62c54ce0db063b49ed71f3d3534371be094cf",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/run_field_joint_early_layered_bvi.py",
+      "destination": "experiments/bvi_e2e/run_field_joint_early_layered_bvi.py",
+      "source_sha256": "3189f9757f7a050877fa6ac042a2fc77071798ae891787d3e6198c53f99d516a",
+      "export_sha256": "3189f9757f7a050877fa6ac042a2fc77071798ae891787d3e6198c53f99d516a",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/run_la010010_publication.py",
+      "destination": "experiments/bvi_e2e/run_la010010_publication.py",
+      "source_sha256": "3da2b0c03322c31c5116e75b96a6eefd06c838e8f1f496dc0b37743f9e18553f",
+      "export_sha256": "3da2b0c03322c31c5116e75b96a6eefd06c838e8f1f496dc0b37743f9e18553f",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/run_unified_neural_bvi_comparison.py",
+      "destination": "experiments/bvi_e2e/run_unified_neural_bvi_comparison.py",
+      "source_sha256": "79bde64ec69075f0b9d07c9553b2ffe7909ce2ecaa74776c33e724b3c3736c44",
+      "export_sha256": "79bde64ec69075f0b9d07c9553b2ffe7909ce2ecaa74776c33e724b3c3736c44",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/test_publication_pipeline.py",
+      "destination": "experiments/bvi_e2e/test_publication_pipeline.py",
+      "source_sha256": "a92276c02afa584b71787fb1874c5fe452508c9a5a8ed185734f47bc2935263d",
+      "export_sha256": "a92276c02afa584b71787fb1874c5fe452508c9a5a8ed185734f47bc2935263d",
+      "transformation": "portable default data paths and repository-root detection"
+    },
+    {
+      "source": "experiments/bvi_e2e/acquisition_profiles.json",
+      "destination": "experiments/bvi_e2e/acquisition_profiles.json",
+      "source_sha256": "c38e6681807473e5c7d5b9e54fb2defd5432ce9b1f4b24051b3c5b64acb39b5d",
+      "export_sha256": "93f9a40f615a59f738c1f54d281daa63d0669205d88eb2e64ce4f91f71ddfd50",
+      "transformation": "machine paths made relative; numeric values retained"
+    },
+    {
+      "source": "experiments/bvi_e2e/la010010_protocol.json",
+      "destination": "experiments/bvi_e2e/la010010_protocol.json",
+      "source_sha256": "2d953daff375179b409a7922e30efd4318e59f0ffdbfaf0eaced1ea68de5f9d6",
+      "export_sha256": "883501030659d902d7ed0c65e78d6694838b4f9ef1b1b3aa11e9b64a50050f75",
+      "transformation": "machine paths made relative; numeric values retained"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_la010010/full/protocol.snapshot.json",
+      "destination": "configs/paper/protocol.snapshot.json",
+      "source_sha256": "5968c6910f3feb699bbdc9b189813f4b7598341526515e7b5532dbf20edb7b22",
+      "export_sha256": "7053f45cefdb28448e97c4c26428400ca95edb490799359277db3127a5a59cda",
+      "transformation": "machine paths made relative; numeric values retained"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase5/FROZEN_CALIBRATION.json",
+      "destination": "configs/paper/calibration.json",
+      "source_sha256": "2ccd1327c0b51dcaa4b3c9c804d53007c5d59efeedc01b3604653e49f06702c5",
+      "export_sha256": "01a0e8ac584a0366a5d8ef43170f1741764781ed832a7dd3e97fe4bdb1417933",
+      "transformation": "machine paths made relative; numeric values retained"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase5/final_holdout/run_spec.json",
+      "destination": "configs/paper/run_spec.json",
+      "source_sha256": "98e9ed7b552fcb49f54839f3409bfb1346cb8cbedf4e4e2ce5501537a1ff839e",
+      "export_sha256": "85dccbe34dd0524d36e659c9097c91dc0c1ec51906e1ec43bb369ecc86c13d52",
+      "transformation": "machine paths made relative; numeric values retained"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase5/state/final_holdout.json",
+      "destination": "provenance/final_holdout.json",
+      "source_sha256": "4b99d60c80a849a56f7dd1cae853055193d2267cbe31bf9934966b2e75ff66aa",
+      "export_sha256": "07d95fe1627f7cbcb1137b9156f038d50f790d955a0edc3dc36123abc0725c07",
+      "transformation": "machine paths made relative; numeric values retained"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase5/state/frozen_config.json",
+      "destination": "provenance/frozen_config.json",
+      "source_sha256": "27ebef25a89825b483adce9e538a2e0af401bb9cba2b4d88c4e3dc65edd310b7",
+      "export_sha256": "7616f53854a10425544f76bc53acb82cbc068461c977d2696f152351fcf9720a",
+      "transformation": "machine paths made relative; numeric values retained"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase4/development_affine_center.json",
+      "destination": "configs/paper/ensemble_center.json",
+      "source_sha256": "8f4e3f7dba38ebaacdcb8d58d927b0cee4b0aefcbcf3d68b70452c4378499c5c",
+      "export_sha256": "6edaa06114ab67d95547dcef8e9736b2fe2658c2638e67963d5d1104201b6a83",
+      "transformation": "machine paths made relative; numeric values retained"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase4/development_std_prior.json",
+      "destination": "configs/paper/std_prior.json",
+      "source_sha256": "60b6b1d5468f94bf7ecb4bf31b89449827ab1a16677fb0ab2feb89b3901cf53b",
+      "export_sha256": "3a013d992ebc0381360d002c0f3274284e211d8e9e7a5712b5f8c02c68ae3065",
+      "transformation": "machine paths made relative; numeric values retained"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase4/development_affine_center_zero_bias.npz",
+      "destination": "configs/paper/center_bias.npz",
+      "source_sha256": "498156105da8fd0fa2008b367f5dd5bd40124b5ee02f8c2adafc42c4e307f83a",
+      "export_sha256": "498156105da8fd0fa2008b367f5dd5bd40124b5ee02f8c2adafc42c4e307f83a",
+      "transformation": "unmodified synthetic development-derived array"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase4/development_std_prior_map.npz",
+      "destination": "configs/paper/std_prior.npz",
+      "source_sha256": "48b4461655807ee8c649cd1de5393176e1506faca4a69eee5c60fe67c788a553",
+      "export_sha256": "48b4461655807ee8c649cd1de5393176e1506faca4a69eee5c60fe67c788a553",
+      "transformation": "unmodified synthetic development-derived array"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase5/final_holdout/summary.json",
+      "destination": "results/paper/summary.json",
+      "source_sha256": "cf710dfdcd448730112eada3cd0ab828a3ff6090273dfa1c44eda54c29cd97f6",
+      "export_sha256": "e936a1d67ef2332a8d51ce8df90949151d398fac9698f9adc488b924a937a105",
+      "transformation": "machine paths made relative; numeric values retained"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase5/final_holdout/metrics.csv",
+      "destination": "results/paper/metrics.csv",
+      "source_sha256": "2e92af35efdacd219c73defbadce51f41eb954bb7986cc2ee3b6a9105b9647ff",
+      "export_sha256": "5e43668f140cd41d6a99f54c62b5494b1795075110a376e6ab12a6bc47510151",
+      "transformation": "machine paths made relative; numeric cells retained"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase5/final_holdout/planned_comparisons.csv",
+      "destination": "results/paper/planned_comparisons.csv",
+      "source_sha256": "509a23d7a1c1a2c0dd1afe238072d5de576fd2a57c3af6ad6668d5821ba2bc2a",
+      "export_sha256": "2b445bf210d2c9097911145968aeef152b65f775fa089421056f496ff77077be",
+      "transformation": "machine paths made relative; numeric cells retained"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase5/final_holdout/clustered_bootstrap.csv",
+      "destination": "results/paper/clustered_bootstrap.csv",
+      "source_sha256": "d0b4cb5d7b49b8f4ca8beabb96ce4fbb9340fa7ebb1eecbbf8ee6b70a9d59405",
+      "export_sha256": "369ea489c362790174049065b0c91a6f8add33199fefdab76120bafd5b2ec070",
+      "transformation": "machine paths made relative; numeric cells retained"
+    },
+    {
+      "source": "experiments/bvi_e2e/publication_la010010/full/neural_bvi_optimization_20260721_phase5/final_holdout/publication_table.csv",
+      "destination": "results/paper/publication_table.csv",
+      "source_sha256": "63626b45b41059b8a77e0bfa2a7509156039a77bf829d2563c9c3c9710d37377",
+      "export_sha256": "f54efde19078d3c3dc92e25fbcd4a32f84b596b28f891790bce285f77c4c9a39",
+      "transformation": "machine paths made relative; numeric cells retained"
+    }
+  ]
+}
