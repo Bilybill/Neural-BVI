@@ -2,7 +2,7 @@
 # Choose the CPU/CUDA PyTorch wheel appropriate for your platform.
 numpy==2.4.4
 scipy==1.17.1
-torch==2.11.0
+torch==2.14.0
 deepwave==0.0.27
 matplotlib==3.10.8
 scikit-image==0.26.0
