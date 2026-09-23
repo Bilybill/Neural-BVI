@@ -1,0 +1,16 @@
+baseline,ci_high,ci_low,difference_proposed_minus_baseline,favorable_direction,metric,model_count,proposed,proposed_better_model_count,research_question,role
+nn,-0.001988459721126059,-0.005724989936378886,-0.003850382745728617,negative,normalized_rmse,20,neural_bvi,16,RQ1_reconstruction,primary
+nn,-0.0005045976615401663,-0.02523285507180894,-0.013135075558079915,negative,epsilon_mae,20,neural_bvi,12,RQ1_reconstruction,secondary
+nn,-0.009944740439144277,-0.017073847431068625,-0.013436572688321274,negative,data_misfit,20,neural_bvi,19,RQ1_reconstruction,secondary
+mc_dropout,-0.00934845191401967,-0.014305419239527236,-0.011779891631362959,negative,crps,20,neural_bvi,20,RQ2_neural_uq,primary
+deep_ensemble,-0.004918542339603918,-0.009348424676851564,-0.007126199210206255,negative,crps,20,neural_bvi,20,RQ2_neural_uq,primary
+mc_dropout,-0.0009108444996488624,-0.002639521131997571,-0.001795024556158859,negative,calibrated_gaussian_crps,20,neural_bvi,16,RQ2_neural_uq,secondary
+deep_ensemble,-0.0016729105833538937,-0.003224413684360269,-0.0024177320673396565,negative,calibrated_gaussian_crps,20,neural_bvi,18,RQ2_neural_uq,secondary
+mc_dropout,0.0031007995605468676,-0.020632085164388025,-0.007829538981119792,negative,calibrated_coverage_error,20,neural_bvi,11,RQ2_neural_uq,secondary
+deep_ensemble,0.0058303883870442635,-0.01206279500325521,-0.003274993896484379,negative,calibrated_coverage_error,20,neural_bvi,12,RQ2_neural_uq,secondary
+mc_dropout,0.05956331508125878,-0.06554868684506884,-0.0026658092907802327,positive,std_error_spearman,20,neural_bvi,10,RQ2_neural_uq,secondary
+deep_ensemble,0.06943623783737711,-0.05205810937179147,0.009860039600216234,positive,std_error_spearman,20,neural_bvi,12,RQ2_neural_uq,secondary
+mc_dropout,0.000630465646940341,-0.0025436363982068136,-0.0009428234072669055,negative,ause,20,neural_bvi,13,RQ2_neural_uq,secondary
+deep_ensemble,0.000641294444942091,-0.0023946024738590453,-0.0008487954704345429,negative,ause,20,neural_bvi,11,RQ2_neural_uq,secondary
+residual_laplace,-0.0019192419536209857,-0.0049727346315760175,-0.0033883392396798855,negative,crps,20,neural_bvi,17,RQ2_physics_uq,secondary
+residual_laplace,-0.0026051477519391224,-0.0074413881497168,-0.004938631144523485,negative,ause,20,neural_bvi,16,RQ2_physics_uq,secondary

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite this research software if you use Neural-BVI in your work."
+type: software
+title: "Neural-BVI: Ground-Penetrating Radar Inversion With Boosting Variational Inference"
+version: 0.1.0
+license: Apache-2.0
+repository-code: "https://github.com/Bilybill/Neural-BVI"
+url: "https://github.com/Bilybill/Neural-BVI"
+authors:
+  - family-names: Liu
+    given-names: Xintong
+  - family-names: Pi
+    given-names: Qiyang
+  - family-names: Wang
+    given-names: Yonghao
+keywords:
+  - ground-penetrating radar
+  - variational inference
+  - inverse problems
+  - uncertainty quantification

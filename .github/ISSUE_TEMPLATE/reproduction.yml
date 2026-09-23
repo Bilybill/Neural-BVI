@@ -1,0 +1,20 @@
+name: Reproduction question
+description: Ask about a result, protocol or artifact
+body:
+  - type: dropdown
+    id: level
+    attributes:
+      label: Reproduction level
+      options:
+        - Procedural demo
+        - Archived metric aggregation
+        - Full paper evaluation with original artifacts
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Question and evidence
+      description: Include commands, hashes and expected result. Never attach restricted recordings.
+    validations:
+      required: true

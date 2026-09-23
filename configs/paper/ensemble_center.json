@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "center_kind": "uniform_ensemble_mean_with_shrunk_affine_correction",
+  "ensemble_seeds": [
+    7,
+    71,
+    711,
+    1701,
+    2701
+  ],
+  "global_weights": [
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2
+  ],
+  "bias_path": "configs/paper/center_bias.npz",
+  "bias_sha256": "498156105da8fd0fa2008b367f5dd5bd40124b5ee02f8c2adafc42c4e307f83a",
+  "bias_scale": 0.0,
+  "mean_shift": 0.003191519890602355,
+  "contrast_correction": -0.02024890119049233
+}

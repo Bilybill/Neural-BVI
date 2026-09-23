@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "kind": "mean_absolute_development_error_std_prior",
+  "prior_path": "configs/paper/std_prior.npz",
+  "prior_sha256": "48b4461655807ee8c649cd1de5393176e1506faca4a69eee5c60fe67c788a553",
+  "prior_key": "structural_error_prior",
+  "scale": 0.75
+}

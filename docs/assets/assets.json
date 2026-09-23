@@ -1,0 +1,25 @@
+{
+  "figures": [
+    {
+      "asset": "docs/assets/paper/architecture.png",
+      "asset_sha256": "3d6042d231de58957ab4d8f3e0486aae09d600ce5ed0f7fe1230ed54780d0bdc",
+      "paper_figure": 1
+    },
+    {
+      "asset": "docs/assets/paper/synthetic-results.png",
+      "asset_sha256": "2e6a603db5e1df0558ccc1bb833d6d3a26c1da8ce64216f7fbe202028f942ae8",
+      "paper_figure": 2
+    },
+    {
+      "asset": "docs/assets/paper/field-results.png",
+      "asset_sha256": "0505cade9da00b15bc6ecbe1bc63b1158bb2e53053a0b83ddd0d39aa6104bdee",
+      "paper_figure": 3
+    }
+  ],
+  "logo": {
+    "asset": "docs/assets/brand/neural-bvi-logo.png",
+    "asset_sha256": "66fd3ab07674223f75f210ee97aeb12d0deda1aa8002acf6fe9360155ae10a55",
+    "scientific_data_used": false,
+    "role": "Decorative project branding only"
+  }
+}

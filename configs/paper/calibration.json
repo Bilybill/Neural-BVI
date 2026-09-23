@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "nominal_coverage": 0.95,
+  "method_scales": {
+    "mc_dropout": 7.976083234617511,
+    "deep_ensemble": 4.708565913660769,
+    "residual_laplace": 1.912344593926287,
+    "neural_bvi": 0.8191470054346994
+  }
+}
